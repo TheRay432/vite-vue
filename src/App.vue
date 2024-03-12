@@ -9,6 +9,7 @@ const test = ref(null);
 const arr = computed(() => [getRequiredValidate('test123123', inputValue.value)]);
 const arr2 = computed(() => [getRequiredValidate('test123123', inputValue2.value)]);
 const testPullRequest = ref(null);
+const testPullRequest2 = ref(null);
 const store = useValidateStore();
 function testFunc(): void {
   store.setValidate();
