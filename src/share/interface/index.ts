@@ -1,4 +1,4 @@
-import { ErrMsg } from '../class';
+import type { RuleExpression } from 'vee-validate';
 import { InputLength, InputType } from '../enum';
 
 /** BaseInput元件-props */
@@ -12,7 +12,7 @@ export interface BaseInputProps {
   /** 預設顯示文字 */
   placeholder?: string;
   /** 驗證規則 */
-  rules?: (() => ErrMsg | null)[];
+  rules?: RuleExpression<unknown>;
 }
 
 /** BaseErrMsg元件-props */
