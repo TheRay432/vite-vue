@@ -17,8 +17,6 @@ export interface BaseInputProps {
 
 /** BaseErrMsg元件-props */
 export interface BaseErrMsgProps {
-  /** 是否錯誤 */
-  isError: boolean;
-  /** 錯誤訊息 */
-  errMsg: string | undefined;
+  /** 欄位名稱 */
+  name: string;
 }

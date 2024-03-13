@@ -1,6 +1,5 @@
 <script setup lang="ts">
 import { getRequiredValidate } from './share/validate';
-const test = ref(999);
 /** 輸入值 */
 const inputValue = ref('');
 const testFunc = () => {
@@ -10,13 +9,15 @@ const testFunc = () => {
 
 <template>
   <BaseForm @submit-event="testFunc">
-    <BaseInput
+    <div class="flex items-baseline">
+      <BaseInput
       :name="'nickname'"
       :rules="getRequiredValidate($t('aaa'))"
       :placeholder="'請輸入暱稱'"
       v-model="inputValue"
     />
     <button>送出</button>
+    </div>
   </BaseForm>
 </template>
 
