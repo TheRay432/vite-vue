@@ -1,5 +1,6 @@
 <script setup lang="ts">
 import { getRequiredValidate } from './share/validate';
+const test123 = ref(456);
 /** 輸入值 */
 const inputValue = ref('');
 const testFunc = () => {
