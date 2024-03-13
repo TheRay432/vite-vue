@@ -15,7 +15,8 @@ const model = defineModel<string>();
 </script>
 
 <template>
-  <v-filed
+  <div class="flex flex-col">
+    <v-filed
     class="px-4 py-2 rounded-md border border-gray-300 outline-none focus:ring-blue-500 focus:border-blue-300 relative"
     :class="{
       small: inputLength === InputLength.Small,
@@ -30,7 +31,8 @@ const model = defineModel<string>();
     v-model="model"
     autocomplete="off"
   />
-  <ErrorMessage :name="name" />
+  <BaseErrMsg :name="name" />
+  </div>
 </template>
 
 <style scoped>
